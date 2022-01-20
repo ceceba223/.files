@@ -1,0 +1,110 @@
+[colors]
+background = #1e1e21
+foreground = #d0d0d0
+accent = #7da6ff
+alert = #7da6ff
+
+[bar/bar]
+monitor = DP-0
+
+fixed-center = true
+
+width = 50%
+height = 40
+
+radius = 10.0
+
+offset-x = 25%
+offset-y = 0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = "Anonymous Pro:size=14"
+
+modules-left = ewmh
+modules-center = date
+modules-right = powermenu
+
+locale = en_US.UTF-8
+
+
+[module/ewmh]
+type = internal/xworkspaces
+
+icon-0 = 1
+icon-1 = 2
+icon-2 = 3
+icon-3 = 4
+icon-4 = 5
+
+;format = <label>
+
+lable-active = %name%
+lable-active-foreground = #82aaff
+
+lable-empty = %name%
+lable-empty-foreground = #00ff00
+
+
+[module/memory]
+type = internal/memory
+interval = 3
+
+
+[module/date]
+type = internal/date
+interval = 1.0
+
+time = %k : %M
+time-alt = %H:%M:%S
+date = %b %e
+date-alt = %d-%m-%Y
+
+format = <label>
+format-foreground = ${colors.accent}
+label = %date%  |  %time%
+label-font = 1
+lable-foreground = ${color.accent}
+
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+
+format-spacing = 1
+format-underline = #BF616A
+
+label-open = " Session "
+label-close = " Close"
+label-separator = |
+
+menu-0-0 = "Reboot"
+menu-0-0-exec = menu-open-1
+menu-0-1 = "Power off"
+menu-0-1-exec = menu-open-2
+menu-0-2 = "Log out"
+menu-0-2-exec = menu-open-3
+
+menu-1-0 = "Reboot"
+menu-1-0-exec = sudo reboot
+menu-1-1 = "Cancel "
+menu-1-1-exec = menu-open-0
+
+menu-2-0 = "Power off"
+menu-2-0-exec = sudo poweroff
+menu-2-1 = "Cancel "
+menu-2-1-exec = menu-open-0
+
+menu-3-0 = "Log out"
+menu-3-0-exec = openbox --exit
+menu-3-1 = "Cancel "
+menu-3-1-exec = menu-open-0
+
+
+[settings]
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over

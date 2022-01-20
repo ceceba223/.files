@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+  <menu id="root-menu" label="root-menu">
+    <menu id="menu-2435271" label="Terminals">
+      <item label="Alacritty">
+        <action name="Execute">
+          <execute>alacritty</execute>
+        </action>
+      </item>
+    </menu>
+    <menu id="menu-8990624" label="Editors">
+      <item label="Vim">
+        <action name="Execute">
+          <execute>vim</execute>
+        </action>
+      </item>
+      <item label="VS Code">
+        <action name="Execute">
+          <execute>code</execute>
+        </action>
+      </item>
+    </menu>
+    <menu id="menu-827235" label="Browser">
+      <item label="Firefox">
+        <action name="Execute">
+          <execute>firefox</execute>
+        </action>
+      </item>
+    </menu>
+    <menu id="menu-9580658" label="Multimedia">
+      <item label="Psst">
+        <action name="Execute">
+          <execute>psst.sh</execute>
+        </action>
+      </item>
+      <item label="Ani-Cli">
+        <action name="Execute">
+          <execute>ani-cli</execute>
+        </action>
+      </item>
+    </menu>
+    <menu id="menu-8956011" label="Office">
+      <item label="Libre Office">
+        <action name="Execute">
+          <execute>libreoffice</execute>
+        </action>
+      </item>
+    </menu>
+  </menu>
+</openbox_menu>
