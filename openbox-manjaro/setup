@@ -1,0 +1,24 @@
+#!/bin/bash
+
+{ # check if openbox-patched is installed
+  openbox --version &&
+  echo "Openbox is installed. /nPlease make sure it's openbox-patched or round corners won't work"
+  read -p "Have you installed openbox-patched? [Y/n]" cofirm
+  if [ $confirm == "n" ] || [ $confirm == "N" ]
+  then
+    exit
+  fi
+} || {
+  echo "Openbox-patched is not installed!"
+  exit
+}
+
+sudo pacman -S alacritty picom polybar
+
+directory = pwd
+
+ln -s ${directory}/.themes ~/.themes
+ln -s ${directory}/.config/alacritty ~/.config/alacritty
+ln -s ${directory}/.config/openbox ~/.config/openbox
+ln -s ${directory}/.config/picom ~/.config/picom
+ln -s ${directory}/.config/polybar ~/.config/polybar
