@@ -15,3 +15,6 @@ polybar bar &
 
 # start compositor
 picom &
+
+# notification server
+dunst &

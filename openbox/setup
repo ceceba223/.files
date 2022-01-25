@@ -13,9 +13,9 @@
   exit
 }
 
-sudo pacman -S alacritty picom polybar
+sudo pacman -S alacritty picom
 
-directory = pwd
+directory = "pwd"
 
 ln -s ${directory}/.themes ~/.themes
 ln -s ${directory}/.config/alacritty ~/.config/alacritty
