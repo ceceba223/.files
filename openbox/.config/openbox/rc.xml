@@ -331,6 +331,17 @@
       <command>alacritty</command>
     </action>
   </keybind>
+
+  <!-- Toggle Umlaute -->
+  <keybind key="W-u">
+    <action name="Execute">
+      <startupnotify>
+        <enabled>true</enabled>
+        <name>Umlaute</name>
+      </startupnotify>
+      <command>bash ~/programming/umlaute-toggle/toggle-umlaute</command>
+    </action>
+  </keybind>
 </keyboard>
 
 <mouse>
