@@ -21,6 +21,7 @@ export PATH=$PATH:/snap/bin/
 export PATH=$PATH:/home/hagen/url-shortcuts/
 export PATH=$PATH:$HOME/packages/ani-cli/
 export PATH=$PATH:~/.local/bin/
+export PATH=$PATH:/home/hagen/.local/share/gem/ruby/3.0.0/bin
 
 [[ $- != *i* ]] && return
 
@@ -104,8 +105,13 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
+# Promt configuration
 PS1="\e[0;35m\W\e[0m> "
 
-#cbonsai -p
+# Color script
+
+colorscript random
+
+
 . "$HOME/.cargo/env"
 export PATH="$PATH:$HOME/.spicetify"
