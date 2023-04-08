@@ -3,6 +3,7 @@
 #
 
 # custom aliases:
+alias vim="nvim"
 alias la="ls -Al"
 alias sussy="sudo"
 alias ..="cd .."
@@ -11,7 +12,7 @@ alias mv="mv -i"
 alias pip="pip3"
 
 # ssh server
-alias debian-server="ssh -p 346 deb@192.168.178.47"
+alias debian-server="ssh -p 734 debian-server@192.168.178.47"
 
 # custom commands:
 export PATH=$PATH:$HOME/.bin/
